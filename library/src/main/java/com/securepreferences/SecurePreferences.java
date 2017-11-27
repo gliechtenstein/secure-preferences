@@ -262,7 +262,7 @@ public class SecurePreferences implements SharedPreferences {
     }
 
 
-    private String encrypt(String cleartext) {
+    public String encrypt(String cleartext) {
         if (TextUtils.isEmpty(cleartext)) {
             return cleartext;
         }
@@ -285,7 +285,7 @@ public class SecurePreferences implements SharedPreferences {
      * @param ciphertext
      * @return decrypted plain text, unless decryption fails, in which case null
      */
-    private String decrypt(final String ciphertext) {
+    public String decrypt(final String ciphertext) {
         if (TextUtils.isEmpty(ciphertext)) {
             return ciphertext;
         }
